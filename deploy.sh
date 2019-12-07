@@ -12,7 +12,7 @@ if [ $# -eq 1 ]; then
 	git commit -m "$1"
 	git push
 	echo "Git repository updated. Now running update on server."
-	ssh nshelly@192.168.56.2 -p 55555 "/home/nshelly/scripts/update_server.sh"
+	ssh nshelly@192.168.56.2 -p 55555 "sh /home/nshelly/scripts/update_server.sh"
 	exit 0
 fi
 exit 1
